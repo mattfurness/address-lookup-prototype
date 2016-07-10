@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
+using AddressLookup.Api.Settings;
 using Nest;
 
 namespace AddressLookup.Api.Address.ElasticSearch
@@ -11,11 +12,10 @@ namespace AddressLookup.Api.Address.ElasticSearch
     {
         private ElasticClient _client;
 
-        public ElasticsearchSearcher()
+        public ElasticsearchSearcher(ISettings settings)
         {
-            var node = new Uri(ConfigurationManager.AppSettings["ElasticSearchHost"]);
-            var settings = new ConnectionSettings(node);
-            _client = new ElasticClient(settings);
+            var node = new Uri(settings["ElasticSearchHost"]);
+            _client = new ElasticClient(new ConnectionSettings(node));
         }
 
 
