@@ -1,4 +1,4 @@
-﻿namespace AddressLookup.Api.Address
+﻿namespace AddressLookup.Api.Addresses
 {
     public class SearchQuery
     {
@@ -11,4 +11,4 @@
         public int MaxResults { get; }
         public string Query { get; }
     }
-}
+}   

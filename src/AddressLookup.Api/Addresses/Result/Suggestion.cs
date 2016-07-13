@@ -1,8 +1,8 @@
-﻿namespace AddressLookup.Api.Address
+﻿namespace AddressLookup.Api.Addresses.Result
 {
-    public class SuggestionResult
+    public class Suggestion
     {
-        public SuggestionResult(string id, string text)
+        public Suggestion(string id, string text)
         {
             Id = id;
             Text = text;

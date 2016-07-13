@@ -1,6 +1,5 @@
-﻿using AddressLookup.Api.Address.ElasticSearch;
-using AddressLookup.Api.Settings.AppConfig;
-using Autofac;
+﻿using Autofac;
+using Newtonsoft.Json;
 
 namespace AddressLookup.Api.Settings
 {
@@ -9,6 +8,7 @@ namespace AddressLookup.Api.Settings
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<AppConfigSettings>().AsImplementedInterfaces().SingleInstance();
+            builder.RegisterType<CustomJsonSerializer>().As<JsonSerializer>().SingleInstance();
         }
     }
 }

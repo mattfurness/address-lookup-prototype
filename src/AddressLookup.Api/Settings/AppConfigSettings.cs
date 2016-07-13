@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace AddressLookup.Api.Settings.AppConfig
+namespace AddressLookup.Api.Settings
 {
     class AppConfigSettings: ISettings
     {

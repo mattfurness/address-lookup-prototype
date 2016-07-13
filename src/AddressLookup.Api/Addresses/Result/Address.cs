@@ -1,4 +1,4 @@
-﻿namespace AddressLookup.Api.Address
+﻿namespace AddressLookup.Api.Addresses.Result
 {
     public class AddressDetail
     {
@@ -61,7 +61,7 @@
         public decimal? slp_latitude { get; set; }
     }
 
-    public class AddressResult
+    public class Address
     {
         public string address_detail_pid { get; set; }
         public string full_address_line { get; set; }

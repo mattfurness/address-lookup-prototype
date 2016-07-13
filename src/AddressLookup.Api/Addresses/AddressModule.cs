@@ -5,7 +5,7 @@ using Nancy;
 using Nancy.ModelBinding;
 using Nancy.Validation;
 
-namespace AddressLookup.Api.Address
+namespace AddressLookup.Api.Addresses
 {
     public class MatchedResults<TResult>
     {
@@ -25,7 +25,7 @@ namespace AddressLookup.Api.Address
         {
             _searcher = searcher;
             Get["/suggest", true] = (_, ctx) => Suggest();
-            Get["/search", true] = (_, ctx) => Search();
+            Get["/query", true] = (_, ctx) => Search();
         }
 
         private async Task<object> Suggest()
@@ -55,7 +55,7 @@ namespace AddressLookup.Api.Address
 
         private SearchQuery BuildSearchQuery(SearchRequest request)
         {
-            return new SearchQuery(request.Count, request.Text);
+            return new SearchQuery((int)request.Count, request.Text);
         }
     }
 }

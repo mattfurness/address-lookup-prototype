@@ -1,7 +1,6 @@
-﻿using AddressLookup.Api.Address.ElasticSearch;
-using Autofac;
+﻿using Autofac;
 
-namespace AddressLookup.Api.Address
+namespace AddressLookup.Api.Addresses
 {
     class DependencyRegistration : Module
     {
